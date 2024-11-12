@@ -28,6 +28,7 @@ const Menu = () => {
     localStorage.removeItem('token'); 
     setTimeout(()=>{
           window.location.href = `${process.env.REACT_APP_FRONTEND_URL}/logIn`;  
+          window.history.pushState(null, "", window.location.href);
     }, 500);
   }
 
@@ -36,7 +37,7 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img src="/logo.png" style={{ width: "50px" }} />
       <div className="menus">
         <ul>
           <li>
